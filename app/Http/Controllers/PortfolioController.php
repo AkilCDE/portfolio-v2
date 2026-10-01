@@ -20,13 +20,24 @@ class PortfolioController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'content' => 'required|string|max:2000',
-        ]);
+        $content = $request->input('message') ?? $request->input('content');
+        $name = $request->input('name');
+        $email = $request->input('email');
 
-        Message::create([
-            'content' => $request->content,
-        ]);
+        $fullContent = $content;
+        if ($name || $email) {
+            $fullContent = "From: " . ($name ?? 'Anonymous') . " <" . ($email ?? 'no-email') . ">\n\n" . $content;
+        }
+
+        if (!empty($fullContent)) {
+            Message::create([
+                'content' => $fullContent,
+            ]);
+        }
+
+        if ($request->wantsJson() || $request->ajax()) {
+            return response()->json(['success' => true, 'message' => 'Message sent successfully!']);
+        }
 
         return back()->with('success', 'Message sent successfully!');
     }

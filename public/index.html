@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akil Cyrylle Dangel — Software Developer & Game Creator</title>
+  <meta name="description" content="Official Portfolio of Akil Cyrylle Dangel — Software Developer, Game Creator & Hardware Maker specializing in Laravel, Unity, Flutter, MySQL, C++, and Arduino.">
+  <meta name="author" content="Akil Cyrylle Dangel">
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="images/ako.png">
+</head>
+<body>
+
+  <!-- ==================== Top Navigation Bar ==================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-brand" aria-label="Akil Cyrylle Dangel Home">
+        <img src="images/ako.png" alt="Akil Cyrylle Dangel" class="brand-avatar">
+        <span>Akil Cyrylle <span class="brand-name-highlight">Dangel</span></span>
+      </a>
+
+      <!-- Desktop & Mobile Navigation Links -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">About Me</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#achievements" class="nav-link">Achievements</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#hobbies" class="nav-link">Hobbies</a></li>
+        <li><a href="#contact" class="nav-link">Contact Me</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Real Light / Dark Mode Sliding Toggle Switch -->
+        <button class="theme-switch-toggle" id="themeToggleBtn" aria-label="Toggle light and dark mode" title="Toggle Theme">
+          <span class="switch-track">
+            <span class="switch-icon icon-sun">☀️</span>
+            <span class="switch-icon icon-moon">🌙</span>
+            <span class="switch-thumb" id="themeThumb">
+              <span id="themeIcon">🌙</span>
+            </span>
+          </span>
+        </button>
+
+        <!-- Mobile Menu Hamburger Button -->
+        <button class="mobile-toggle" id="mobileToggleBtn" aria-label="Open mobile navigation menu">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== Hero Section ==================== -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-status-tag">
+              <span class="pulse-dot"></span>
+              <span>Available for New Opportunities</span>
+            </div>
+
+            <h1 class="hero-title">
+              Hi, I'm <span class="name-highlight" id="typeName"></span><span class="type-cursor">|</span>
+            </h1>
+
+            <p class="hero-tagline">
+              4th-Year IT Student • Software Developer • Game & Hardware Creator
+            </p>
+
+            <p class="hero-description">
+              Passionate developer crafting modern web applications with Laravel, immersive 3D games in Unity, cross-platform apps in Flutter, and interactive hardware projects using Arduino.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#projects" class="btn btn-primary">
+                View My Projects
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <a href="#contact" class="btn btn-outline">
+                Contact Me
+              </a>
+            </div>
+
+            <div class="hero-stats">
+              <div class="hero-stat-item">
+                <strong>2x</strong>
+                <span>Champion Awards</span>
+              </div>
+              <div class="hero-stat-item">
+                <strong>8+</strong>
+                <span>Core Tech Stacks</span>
+              </div>
+              <div class="hero-stat-item">
+                <strong>4+</strong>
+                <span>Featured Projects</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Profile Image & Live GitHub Contributions Card -->
+          <div class="hero-image-wrap">
+            <div class="profile-card-container">
+              <div class="profile-img-frame">
+                <img src="images/ako.png" alt="Akil Cyrylle Dangel - Developer Portrait">
+              </div>
+
+              <!-- Animated Energy & Light Pedestal Under Image -->
+              <div class="profile-under-animation">
+                <div class="under-glow-pedestal"></div>
+                <div class="under-light-bar"></div>
+                <div class="under-sparks">
+                  <span class="spark s1"></span>
+                  <span class="spark s2"></span>
+                  <span class="spark s3"></span>
+                  <span class="spark s4"></span>
+                  <span class="spark s5"></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Real-Time GitHub Contributions Outer Wrapper -->
+            <div class="github-contrib-wrapper">
+              <!-- The Original GitHub Contributions Card -->
+              <div class="github-contributions-card">
+                <div class="contrib-header">
+                  <div class="contrib-title-wrap">
+                    <svg class="github-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span>GitHub Contributions</span>
+                  </div>
+                  <a href="https://github.com/AKILCDE" target="_blank" rel="noopener noreferrer" class="contrib-user-link">@AKILCDE ↗</a>
+                </div>
+                
+                <div class="contrib-count-banner" id="contribCountBanner">
+                  Fetching 2026 contributions...
+                </div>
+
+                <div class="contrib-grid-scroll">
+                  <div class="contrib-grid" id="githubContribGrid"></div>
+                </div>
+
+                <div class="contrib-footer">
+                  <span class="contrib-legend-label">Less</span>
+                  <ul class="contrib-legend-squares">
+                    <li class="level-0" title="0 contributions"></li>
+                    <li class="level-1" title="1-3 contributions"></li>
+                    <li class="level-2" title="4-6 contributions"></li>
+                    <li class="level-3" title="7-9 contributions"></li>
+                    <li class="level-4" title="10+ contributions"></li>
+                  </ul>
+                  <span class="contrib-legend-label">More</span>
+                </div>
+              </div>
+
+              <!-- Year Filter Buttons Outside on the Right Side -->
+              <div class="contrib-year-filters-outside" id="contribYearFilters">
+                <button class="year-filter-btn active" data-year="2026">2026</button>
+                <button class="year-filter-btn" data-year="2025">2025</button>
+                <button class="year-filter-btn" data-year="2024">2024</button>
+                <button class="year-filter-btn" data-year="2023">2023</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Skills Section (Train Loop Sliding to the Right) ==================== -->
+    <section class="skills-section" id="skills">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-badge">Tech Train Track</span>
+          <h2 class="section-title">Technical Skills & Technologies</h2>
+          <p class="section-desc">A continuous train loop of my core programming languages, frameworks, databases, and embedded systems sliding smoothly to the right.</p>
+        </div>
+      </div>
+
+      <!-- Infinite Train Track Container (Sliding to Right) -->
+      <div class="train-track-container" title="Hover to pause train">
+        <div class="train-track">
+          <!-- First Set of Train Cars -->
+          <div class="skill-train-car">
+            <div class="skill-icon-box">🔴</div>
+            <div class="skill-car-info">
+              <h4>Laravel</h4>
+              <span>PHP • MVC • REST APIs</span>
+            </div>
+          </div>
+
+          <div class="skill-train-car">
+            <div class="skill-icon-box">🎮</div>
+            <div class="skill-car-info">
+              <h4>Unity</h4>
+              <span>3D/2D Engine • C#</span>
+            </div>
+          </div>
+
+          <div class="skill-train-car">
+            <div class="skill-icon-box">📱</div>
+            <div class="skill-car-info">
+              <h4>Flutter</h4>
+              <span>Dart • Cross-Platform Mobile</span>
+            </div>
+          </div>
+
+          <div class="skill-train-car">
+            <div class="skill-icon-box">🐬</div>
+            <div class="skill-car-info">
+              <h4>MySQL</h4>
+              <span>Relational DB • Optimization</span>
+            </div>
+          </div>
+
+          <div class="skill-train-car">
+            <div class="skill-icon-box">⚙️</div>
+            <div class="skill-car-info">
+              <h4>C++</h4>
+              <span>OOP • Algorithms • Logic</span>
+            </div>
+          </div>
+
+          <div class="skill-train-car">
+            <div class="skill-icon-box">🌐</div>
+            <div class="skill-car-info">
+              <h4>HTML</h4>
+              <span>HTML5 • Semantic Web • SEO</span>
+            </div>
+          </div>
+
+          <div class="skill-train-car">
+            <div class="skill-icon-box">🎨</div>
+            <div class="skill-car-info">
+              <h4>CSS</h4>
+              <span>CSS3 • Responsive • Modern UI</span>
+            </div>
+          </div>
+
+          <div class="skill-train-car">
+            <div class="skill-icon-box">🤖</div>
+            <div class="skill-car-info">
+              <h4>Arduino</h4>
+              <span>Microcontroller • Sensors • I/O</span>
+            </div>
+          </div>
+
+          <!-- Duplicated Set for Seamless Infinite Train Loop -->
+          <div class="skill-train-car">
+            <div class="skill-icon-box">🔴</div>
+            <div class="skill-car-info">
+              <h4>Laravel</h4>
+              <span>PHP • MVC • REST APIs</span>
+            </div>
+          </div>
+
+          <div class="skill-train-car">
+            <div class="skill-icon-box">🎮</div>
+            <div class="skill-car-info">
+              <h4>Unity</h4>
+              <span>3D/2D Engine • C#</span>
+            </div>
+          </div>
+
+          <div class="skill-train-car">
+            <div class="skill-icon-box">📱</div>
+            <div class="skill-car-info">
+              <h4>Flutter</h4>
+              <span>Dart • Cross-Platform Mobile</span>
+            </div>
+          </div>
+
+          <div class="skill-train-car">
+            <div class="skill-icon-box">🐬</div>
+            <div class="skill-car-info">
+              <h4>MySQL</h4>
+              <span>Relational DB • Optimization</span>
+            </div>
+          </div>
+
+          <div class="skill-train-car">
+            <div class="skill-icon-box">⚙️</div>
+            <div class="skill-car-info">
+              <h4>C++</h4>
+              <span>OOP • Algorithms • Logic</span>
+            </div>
+          </div>
+
+          <div class="skill-train-car">
+            <div class="skill-icon-box">🌐</div>
+            <div class="skill-car-info">
+              <h4>HTML</h4>
+              <span>HTML5 • Semantic Web • SEO</span>
+            </div>
+          </div>
+
+          <div class="skill-train-car">
+            <div class="skill-icon-box">🎨</div>
+            <div class="skill-car-info">
+              <h4>CSS</h4>
+              <span>CSS3 • Responsive • Modern UI</span>
+            </div>
+          </div>
+
+          <div class="skill-train-car">
+            <div class="skill-icon-box">🤖</div>
+            <div class="skill-car-info">
+              <h4>Arduino</h4>
+              <span>Microcontroller • Sensors • I/O</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== About Me Section ==================== -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-badge">Biography</span>
+          <h2 class="section-title">About Me</h2>
+          <p class="section-desc">Get to know the developer behind the screen and the maker behind the circuits.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              Hello! I'm <strong>Akil Cyrylle Dangel</strong>, a passionate <strong>4th-year Information Technology (IT) student</strong> at <strong>Bohol Island State University (BISU) Balilihan Campus</strong>. I am an enthusiastic software developer, game creator, and hardware maker who loves turning complex problems into clean, high-performing digital solutions.
+            </p>
+            <p>
+              Throughout my 4 years of IT education and hands-on projects, I have built strong practical expertise across full stack web development with <strong>Laravel</strong> and <strong>MySQL</strong>, 3D interactive gameplay mechanics in the <strong>Unity engine</strong>, desktop software systems using <strong>Java (NetBeans)</strong>, and real-time embedded computing with <strong>Arduino</strong>.
+            </p>
+            <p>
+              As a graduating senior, I take pride in competitive excellence — proven by earning <strong>1st Place in the 2025 MySQL Database Hackathon</strong> and being crowned <strong>2026 Arduino Champion</strong>. I am eager to contribute my technical foundation, creativity, and dedication to industry projects and modern software engineering teams.
+            </p>
+
+            <div class="about-highlights">
+              <div class="highlight-box">
+                <div class="icon">🎓</div>
+                <h4>4th-Year IT Student</h4>
+                <p>BSIT senior at Bohol Island State University Balilihan Campus.</p>
+              </div>
+              <div class="highlight-box">
+                <div class="icon">🚀</div>
+                <h4>Full Stack Engineering</h4>
+                <p>Clean code architecture, secure RESTful APIs, and responsive UIs.</p>
+              </div>
+              <div class="highlight-box">
+                <div class="icon">🕹️</div>
+                <h4>Game Development</h4>
+                <p>Interactive 3D environments, character mechanics, and quiz logic.</p>
+              </div>
+              <div class="highlight-box">
+                <div class="icon">💡</div>
+                <h4>Hardware & Embedded</h4>
+                <p>Sensor integration, microcontrollers, and real-time physical games.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Overview Card -->
+          <div class="about-side-card">
+            <h3 class="side-card-title">
+              <span>📌</span> Developer Quick Facts
+            </h3>
+            <div class="stack-list">
+              <div class="stack-item">
+                <span>Name</span>
+                <strong>Akil Cyrylle Dangel</strong>
+              </div>
+              <div class="stack-item">
+                <span>Academic Status</span>
+                <strong>4th-Year IT Student</strong>
+              </div>
+              <div class="stack-item">
+                <span>University</span>
+                <span>BISU Balilihan Campus</span>
+              </div>
+              <div class="stack-item">
+                <span>Location</span>
+                <span>Bohol, Philippines</span>
+              </div>
+              <div class="stack-item">
+                <span>Primary Stacks</span>
+                <span class="badge">Laravel • Unity • Arduino</span>
+              </div>
+              <div class="stack-item">
+                <span>Languages</span>
+                <span class="badge">PHP, C++, Java, Dart, SQL</span>
+              </div>
+              <div class="stack-item">
+                <span>Status</span>
+                <span style="color: var(--accent-emerald); font-weight: 700;">Open for Opportunities</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Hobbies Section ==================== -->
+    <section class="hobbies-section" id="hobbies" style="background-color: var(--bg-surface); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-badge">Personal Interests</span>
+          <h2 class="section-title">Hobbies & Passions</h2>
+          <p class="section-desc">What keeps me inspired, curious, and motivated when I'm away from formal projects.</p>
+        </div>
+
+        <div class="hobbies-grid">
+          <div class="hobby-card">
+            <div class="hobby-icon">📱</div>
+            <h3 class="hobby-title">Playing Mobile Games</h3>
+            <p class="hobby-desc">
+              Passionate gamer exploring engaging mobile titles, dissecting gameplay mechanics, level design, UI flows, and competitive strategies that inspire my own game creations.
+            </p>
+          </div>
+
+          <div class="hobby-card">
+            <div class="hobby-icon">💻</div>
+            <h3 class="hobby-title">Coding</h3>
+            <p class="hobby-desc">
+              Experimenting with new programming paradigms, optimizing algorithms, solving complex technical puzzles, and exploring emerging tools across modern development ecosystems.
+            </p>
+          </div>
+
+          <div class="hobby-card">
+            <div class="hobby-icon">🌐</div>
+            <h3 class="hobby-title">Making Websites and Games</h3>
+            <p class="hobby-desc">
+              Transforming creative concepts into interactive reality — whether crafting sleek, animated web experiences or prototyping exciting new indie game scenes and storylines.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Projects Section (Real-Time GitHub Showcase) ==================== -->
+    <section class="projects-section" id="projects">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-badge">GitHub Repositories</span>
+          <h2 class="section-title">Projects & Repositories</h2>
+          <p class="section-desc">Live showcase of my public projects on GitHub (@AKILCDE). Click any project title or card to view the repository on GitHub!</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: Pasya 3D Horror Game -->
+          <article class="project-card">
+            <div class="project-card-header">
+              <div class="project-title-left">
+                <span class="repo-type-icon">🎮</span>
+                <h3 class="project-title">
+                  <a href="https://github.com/AKILCDE/PASYA_3D_Horror_Game" target="_blank" rel="noopener noreferrer" class="project-github-title-link">
+                    PASYA_3D_Horror_Game
+                  </a>
+                </h3>
+              </div>
+              <span class="project-expand-arrow">↗</span>
+            </div>
+            <div class="project-expand-body">
+              <div class="project-img-wrapper">
+                <img src="images/pasyaGame.png" alt="Pasya 3D Horror Game using Unity">
+                <span class="project-category-badge">Unity • 3D Horror</span>
+              </div>
+              <div class="project-body-content">
+                <p class="project-description">
+                  A pulse-pounding 3D horror survival game built with the Unity game engine. Players must navigate dimly lit hallways and answer critical quizzes under intense pressure while evading relentless night monsters lurking in the dark.
+                </p>
+                <div class="project-tech-tags">
+                  <span class="tech-tag">Unity 3D</span>
+                  <span class="tech-tag">C#</span>
+                  <span class="tech-tag">Quiz Mechanics</span>
+                  <span class="tech-tag">Monster AI</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/AKILCDE/PASYA_3D_Horror_Game" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                    <span>View Repository on GitHub</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Course Enrollment System -->
+          <article class="project-card">
+            <div class="project-card-header">
+              <div class="project-title-left">
+                <span class="repo-type-icon">🎓</span>
+                <h3 class="project-title">
+                  <a href="https://github.com/AKILCDE/Course-Enrollment-System" target="_blank" rel="noopener noreferrer" class="project-github-title-link">
+                    Course-Enrollment-System
+                  </a>
+                </h3>
+              </div>
+              <span class="project-expand-arrow">↗</span>
+            </div>
+            <div class="project-expand-body">
+              <div class="project-img-wrapper">
+                <img src="images/courseenrolment.png" alt="Course Enrollment System using Java NetBeans">
+                <span class="project-category-badge">Java • NetBeans Desktop</span>
+              </div>
+              <div class="project-body-content">
+                <p class="project-description">
+                  An end-to-end academic course management and student enrollment desktop software developed using Java NetBeans and MySQL. Features course catalogs, prerequisite checking, student records, and automated enrollment workflows.
+                </p>
+                <div class="project-tech-tags">
+                  <span class="tech-tag">Java</span>
+                  <span class="tech-tag">NetBeans IDE</span>
+                  <span class="tech-tag">Swing GUI</span>
+                  <span class="tech-tag">MySQL DB</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/AKILCDE/Course-Enrollment-System" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                    <span>View Repository on GitHub</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: E-Blotter System -->
+          <article class="project-card">
+            <div class="project-card-header">
+              <div class="project-title-left">
+                <span class="repo-type-icon">🚔</span>
+                <h3 class="project-title">
+                  <a href="https://github.com/AKILCDE/eblotter" target="_blank" rel="noopener noreferrer" class="project-github-title-link">
+                    eblotter
+                  </a>
+                </h3>
+              </div>
+              <span class="project-expand-arrow">↗</span>
+            </div>
+            <div class="project-expand-body">
+              <div class="project-img-wrapper">
+                <img src="images/Eblotter.png" alt="E-Blotter System using NetBeans">
+                <span class="project-category-badge">Java • Incident Management</span>
+              </div>
+              <div class="project-body-content">
+                <p class="project-description">
+                  A digital community incident recording and police/barangay blotter management system developed with Java NetBeans and MySQL. Streamlines recording official incident logs, tracking complainant/suspect profiles, and generating secure investigative reports.
+                </p>
+                <div class="project-tech-tags">
+                  <span class="tech-tag">Java</span>
+                  <span class="tech-tag">NetBeans IDE</span>
+                  <span class="tech-tag">Swing GUI</span>
+                  <span class="tech-tag">MySQL DB</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/AKILCDE/eblotter" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                    <span>View Repository on GitHub</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: Arduino Uno Drop Stick Game -->
+          <article class="project-card">
+            <div class="project-card-header">
+              <div class="project-title-left">
+                <span class="repo-type-icon">🤖</span>
+                <h3 class="project-title">
+                  <a href="https://github.com/AKILCDE/DropStickGame" target="_blank" rel="noopener noreferrer" class="project-github-title-link">
+                    DropStickGame
+                  </a>
+                </h3>
+              </div>
+              <span class="project-expand-arrow">↗</span>
+            </div>
+            <div class="project-expand-body">
+              <div class="project-img-wrapper">
+                <img src="images/arduino_game.jpg" alt="Arduino Uno Drop Stick Game Hardware">
+                <span class="project-category-badge">Arduino • Hardware Arcade</span>
+              </div>
+              <div class="project-body-content">
+                <p class="project-description">
+                  An interactive physical arcade reflex game powered by an Arduino Uno microcontroller. Utilizes electromagnetic solenoids to drop sticks at randomized millisecond intervals, challenging players to test and measure their reaction speed.
+                </p>
+                <div class="project-tech-tags">
+                  <span class="tech-tag">Arduino Uno</span>
+                  <span class="tech-tag">C / C++</span>
+                  <span class="tech-tag">Solenoids</span>
+                  <span class="tech-tag">Sensors</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/AKILCDE/DropStickGame" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                    <span>View Repository on GitHub</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Achievements Section ==================== -->
+    <section class="achievements-section" id="achievements" style="background-color: var(--bg-surface); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-badge">Awards & Recognitions</span>
+          <h2 class="section-title">Key Achievements</h2>
+          <p class="section-desc">Milestones and competitive championships recognizing excellence in software and hardware engineering.</p>
+        </div>
+
+        <div class="achievements-grid">
+          <!-- Achievement 1 -->
+          <div class="achievement-card">
+            <div class="achievement-trophy">🏆</div>
+            <div class="achievement-info">
+              <span class="achievement-year">2025</span>
+              <h3 class="achievement-title">Hackathon Champion (Database MySQL)</h3>
+              <p class="achievement-desc">
+                Awarded First Place Champion in a competitive tech hackathon for designing optimal relational database schemas, complex SQL queries, and high-performance database indexing solutions.
+              </p>
+            </div>
+          </div>
+
+          <!-- Achievement 2 -->
+          <div class="achievement-card">
+            <div class="achievement-trophy">🥇</div>
+            <div class="achievement-info">
+              <span class="achievement-year">2026</span>
+              <h3 class="achievement-title">Arduino Champion</h3>
+              <p class="achievement-desc">
+                Won First Place Champion in the embedded systems engineering competition, recognized for innovative microcontroller integration, rapid prototyping, and real-time physical computing execution.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Education Section ==================== -->
+    <section class="education-section" id="education">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-badge">Academic Background</span>
+          <h2 class="section-title">Education Journey</h2>
+          <p class="section-desc">My academic foundation and educational institutions in Bohol, Philippines.</p>
+        </div>
+
+        <div class="timeline">
+          <!-- Tertiary -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <span class="timeline-badge">Tertiary Education</span>
+              <h3 class="timeline-title">Bohol Island State University — Balilihan Campus</h3>
+              <p style="font-size: 0.92rem; font-weight: 600; color: var(--primary); margin-bottom: 6px;">
+                Bachelor of Science in Information Technology (BSIT) — 4th Year Senior
+              </p>
+              <div class="timeline-location">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>Magsija, Balilihan, Bohol</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Secondary -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <span class="timeline-badge">Secondary Education</span>
+              <h3 class="timeline-title">San Roque National High School</h3>
+              <div class="timeline-location">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>San Roque, Balilihan, Bohol</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Primary -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <span class="timeline-badge">Primary Education</span>
+              <h3 class="timeline-title">Ambuan Elementary School</h3>
+              <div class="timeline-location">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span>Ambuan, Catigbian, Bohol</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Contact Me Section ==================== -->
+    <section class="contact-section" id="contact" style="background-color: var(--bg-surface); border-top: 1px solid var(--border-color);">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="section-badge">Get In Touch</span>
+          <h2 class="section-title">Contact Me</h2>
+          <p class="section-desc">Have a question, project proposal, or collaboration in mind? Send me a message below!</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Info Card -->
+          <div class="contact-info-card">
+            <h3 class="contact-info-title">Let's talk about tech, games, or projects.</h3>
+            <p class="contact-info-desc">
+              I'm always eager to discuss software development opportunities, Unity game creations, Arduino robotics, or tech collaborations. Drop a line and I'll respond as soon as possible.
+            </p>
+
+            <div class="contact-meta-list">
+              <div class="contact-meta-item">
+                <div class="contact-meta-icon">👤</div>
+                <div class="contact-meta-text">
+                  <label>Full Name</label>
+                  <span>Akil Cyrylle Dangel</span>
+                </div>
+              </div>
+
+              <div class="contact-meta-item">
+                <div class="contact-meta-icon">📍</div>
+                <div class="contact-meta-text">
+                  <label>Location</label>
+                  <span>Balilihan / Catigbian, Bohol, Philippines</span>
+                </div>
+              </div>
+
+              <div class="contact-meta-item">
+                <div class="contact-meta-icon">✉️</div>
+                <div class="contact-meta-text">
+                  <label>Direct Inquiries</label>
+                  <span>Available via the contact form</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-card">
+            <form id="portfolioContactForm" onsubmit="handleContactSubmit(event)">
+              <div class="form-group">
+                <label for="contactName" class="form-label">Your Name</label>
+                <input 
+                  type="text" 
+                  id="contactName" 
+                  name="name" 
+                  class="form-input" 
+                  placeholder="e.g. Juan Dela Cruz" 
+                  required
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="contactEmail" class="form-label">Your Email</label>
+                <input 
+                  type="email" 
+                  id="contactEmail" 
+                  name="email" 
+                  class="form-input" 
+                  placeholder="e.g. name@example.com" 
+                  required
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="contactMessage" class="form-label">Your Message</label>
+                <textarea 
+                  id="contactMessage" 
+                  name="message" 
+                  class="form-textarea" 
+                  placeholder="Write your message here... tell me about your project or inquiry" 
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn-submit" id="contactSubmitBtn">
+                <span>Submit Message</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== Footer ==================== -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-logo">Akil Cyrylle Dangel</div>
+      <p class="footer-text">
+        Akil Cyrylle 2005
+      </p>
+      <ul class="footer-links">
+        <li><a href="#hero">Back to Top</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Floating Toast Notification -->
+  <div class="toast-notice" id="toastNotice" role="alert" aria-live="polite">
+    <span style="font-size: 1.2rem;">✓</span>
+    <span id="toastMessage">Thank you! Your message has been sent successfully.</span>
+  </div>
+
+  <!-- ==================== Interactive Scripts ==================== -->
+  <script>
+    // --- Theme Switcher (Light Default White & Dark Mode) ---
+    const htmlElement = document.documentElement;
+    const themeToggleBtn = document.getElementById('themeToggleBtn');
+    const themeIcon = document.getElementById('themeIcon');
+
+    // Retrieve saved theme or default to 'dark' (Pitch Black & Blue Fire)
+    const savedTheme = localStorage.getItem('portfolio_theme') || 'dark';
+    setTheme(savedTheme);
+
+    themeToggleBtn.addEventListener('click', () => {
+      const currentTheme = htmlElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      setTheme(newTheme);
+    });
+
+    function setTheme(theme) {
+      htmlElement.setAttribute('data-theme', theme);
+      localStorage.setItem('portfolio_theme', theme);
+      if (theme === 'dark') {
+        themeIcon.textContent = '☀️';
+        themeToggleBtn.setAttribute('title', 'Switch to Light Mode');
+      } else {
+        themeIcon.textContent = '🌙';
+        themeToggleBtn.setAttribute('title', 'Switch to Dark Mode');
+      }
+    }
+
+    // --- Mobile Menu Toggle ---
+    const mobileToggleBtn = document.getElementById('mobileToggleBtn');
+    const navLinks = document.getElementById('navLinks');
+
+    mobileToggleBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('mobile-open');
+    });
+
+    // Close mobile menu when clicking any section link or button
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('mobile-open');
+      });
+    });
+
+    // --- Precise Active Link on Scroll & Click ---
+    const allNavLinks = document.querySelectorAll('.nav-link');
+
+    allNavLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        allNavLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+      });
+    });
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '-25% 0px -45% 0px',
+      threshold: 0
+    };
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          allNavLinks.forEach(link => {
+            if (link.getAttribute('href') === `#${id}`) {
+              link.classList.add('active');
+            } else {
+              link.classList.remove('active');
+            }
+          });
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('section[id]').forEach(sec => sectionObserver.observe(sec));
+
+    // --- Hero Name Typewriter & Erase Animation ---
+    (function initNameTypewriter() {
+      const typeElement = document.getElementById('typeName');
+      if (!typeElement) return;
+
+      const phrases = [
+        "Akil Cyrylle Dangel",
+        "Software Developer",
+        "Game Creator",
+        "Hardware Maker"
+      ];
+
+      let phraseIdx = 0;
+      let charIdx = 0;
+      let isDeleting = false;
+      let typeSpeed = 110;
+
+      function typeLoop() {
+        const currentPhrase = phrases[phraseIdx];
+
+        if (isDeleting) {
+          typeElement.textContent = currentPhrase.substring(0, charIdx - 1);
+          charIdx--;
+          typeSpeed = 50;
+        } else {
+          typeElement.textContent = currentPhrase.substring(0, charIdx + 1);
+          charIdx++;
+          typeSpeed = 110;
+        }
+
+        if (!isDeleting && charIdx === currentPhrase.length) {
+          typeSpeed = 2200; // Pause when full phrase is typed
+          isDeleting = true;
+        } else if (isDeleting && charIdx === 0) {
+          isDeleting = false;
+          phraseIdx = (phraseIdx + 1) % phrases.length;
+          typeSpeed = 400; // Pause before typing next phrase
+        }
+
+        setTimeout(typeLoop, typeSpeed);
+      }
+
+      setTimeout(typeLoop, 500);
+    })();
+
+    // --- Contact Form Submission Handler ---
+    function handleContactSubmit(event) {
+      event.preventDefault();
+      const name = document.getElementById('contactName').value.trim();
+      const email = document.getElementById('contactEmail').value.trim();
+      const message = document.getElementById('contactMessage').value.trim();
+      const submitBtn = document.getElementById('contactSubmitBtn');
+
+      if (!name || !email || !message) {
+        showToast("Please fill in all fields before submitting.");
+        return;
+      }
+
+      // Friendly UI feedback
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span>Sending...</span>';
+
+      // If hosted on http/https, also save to backend database
+      if (window.location.protocol.startsWith('http')) {
+        fetch('/message', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+            'X-Requested-With': 'XMLHttpRequest'
+          },
+          body: JSON.stringify({ name, email, message })
+        }).catch(() => {});
+      }
+
+      setTimeout(() => {
+        showToast(`Thank you, ${name}! Your message has been received.`);
+        document.getElementById('portfolioContactForm').reset();
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = `
+          <span>Submit Message</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+        `;
+      }, 700);
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById('toastNotice');
+      const toastMsg = document.getElementById('toastMessage');
+      toastMsg.textContent = message;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 4500);
+    }
+
+    // --- Real-Time GitHub Contributions Fetcher (Filtered by Year 2023-2026, 2026 Default) ---
+    let cachedGitHubContributionsData = null;
+
+    async function loadGitHubContributions(year = '2026') {
+      const banner = document.getElementById('contribCountBanner');
+      const grid = document.getElementById('githubContribGrid');
+      if (!grid) return;
+
+      const targetYear = String(year);
+
+      try {
+        if (!cachedGitHubContributionsData) {
+          const response = await fetch('https://github-contributions-api.jogruber.de/v4/AKILCDE');
+          if (!response.ok) throw new Error('Contribution API failed');
+          cachedGitHubContributionsData = await response.json();
+        }
+
+        const data = cachedGitHubContributionsData;
+
+        // Extract contribution days for the selected year
+        let yearDays = [];
+        if (data && data.contributions) {
+          yearDays = data.contributions.filter(d => d.date && d.date.startsWith(targetYear));
+        }
+
+        // If selected year has no entries in API (e.g. 2023), generate 365 empty days for visual year grid
+        if (yearDays.length === 0) {
+          const isLeap = (parseInt(targetYear) % 4 === 0);
+          const totalDays = isLeap ? 366 : 365;
+          for (let i = 1; i <= totalDays; i++) {
+            yearDays.push({
+              date: `${targetYear}`,
+              count: 0,
+              level: 0
+            });
+          }
+        }
+
+        const totalYearCount = (data && data.total && data.total[targetYear] !== undefined)
+          ? data.total[targetYear]
+          : yearDays.reduce((acc, curr) => acc + (curr.count || 0), 0);
+
+        if (banner) {
+          banner.innerHTML = `<strong>${totalYearCount}</strong> contributions in ${targetYear}`;
+        }
+
+        grid.innerHTML = yearDays.map(day => {
+          const lvl = day.level !== undefined ? day.level : 0;
+          const text = day.count === 1 ? '1 contribution' : `${day.count || 0} contributions`;
+          return `<div class="contrib-square level-${lvl}" title="${text} on ${day.date || ''}"></div>`;
+        }).join('');
+
+        return;
+      } catch (err) {
+        console.warn('Live GitHub contribution API fallback activated:', err);
+      }
+
+      // Robust fallback if API fails
+      if (banner) {
+        banner.innerHTML = `<strong>${targetYear === '2026' ? '177' : '0'}</strong> contributions in ${targetYear}`;
+      }
+      let fallbackHtml = '';
+      for (let i = 0; i < 364; i++) {
+        fallbackHtml += `<div class="contrib-square level-0" title="0 contributions on ${targetYear}"></div>`;
+      }
+      grid.innerHTML = fallbackHtml;
+    }
+
+    // Init Year Filter Button Listeners
+    document.addEventListener('DOMContentLoaded', () => {
+      const yearBtns = document.querySelectorAll('.year-filter-btn');
+      yearBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          yearBtns.forEach(b => b.classList.remove('active'));
+          e.target.classList.add('active');
+          const selectedYear = e.target.getAttribute('data-year');
+          loadGitHubContributions(selectedYear);
+        });
+      });
+    });
+
+    // --- Real-Time GitHub Repositories Loader ---
+    async function loadGitHubProjects() {
+      const gridContainer = document.querySelector('.projects-grid');
+      if (!gridContainer) return;
+
+      const customImages = {
+        'PASYA_3D_Horror_Game': 'images/pasyaGame.png',
+        'Course-Enrollment-System': 'images/courseenrolment.png',
+        'eblotter': 'images/Eblotter.png',
+        'DropStickGame': 'images/arduino_game.jpg',
+        'ces': 'images/courseenrolment.png'
+      };
+
+      const customBadges = {
+        'PASYA_3D_Horror_Game': 'Unity • 3D Horror',
+        'Course-Enrollment-System': 'Java • NetBeans Desktop',
+        'eblotter': 'Java • Incident Management',
+        'DropStickGame': 'Arduino • Hardware Arcade',
+        'urban-trends-apparel': 'PHP • Laravel E-Commerce',
+        'calculator': 'JavaScript • Web App'
+      };
+
+      const customTags = {
+        'PASYA_3D_Horror_Game': ['Unity 3D', 'C#', 'Quiz AI', 'Monster AI'],
+        'Course-Enrollment-System': ['Java', 'NetBeans', 'Swing GUI', 'MySQL'],
+        'eblotter': ['Java', 'NetBeans', 'MySQL DB', 'Incident Tracking'],
+        'DropStickGame': ['Arduino Uno', 'C/C++', 'Hardware Arcade', 'Solenoids'],
+        'urban-trends-apparel': ['PHP', 'Laravel', 'E-Commerce', 'MySQL'],
+        'calculator': ['HTML5', 'CSS3', 'JavaScript']
+      };
+
+      try {
+        const response = await fetch('https://api.github.com/users/AKILCDE/repos?sort=updated&per_page=100');
+        if (!response.ok) throw new Error('GitHub Repos API failed');
+        const repos = await response.json();
+
+        // Filter out fork repositories to show Akil's original public work
+        const originalRepos = repos.filter(r => !r.fork);
+        if (!originalRepos || originalRepos.length === 0) return;
+
+        gridContainer.innerHTML = originalRepos.map(repo => {
+          const imgUrl = customImages[repo.name] || null;
+          const categoryBadge = customBadges[repo.name] || (repo.language ? `${repo.language} • Repository` : 'GitHub Public Project');
+          const tags = customTags[repo.name] || [repo.language || 'Code', 'GitHub'];
+          const desc = repo.description || 'Public GitHub repository developed by Akil Cyrylle Dangel. Explore source code, branches, and commit activity live on GitHub.';
+          const starCount = repo.stargazers_count > 0 ? `⭐ ${repo.stargazers_count}` : '';
+          const repoUrl = repo.html_url || `https://github.com/AKILCDE/${repo.name}`;
+          const repoIcon = repo.name.toLowerCase().includes('game') ? '🎮' : (repo.name.toLowerCase().includes('system') ? '💻' : '⚡');
+
+          return `
+            <article class="project-card">
+              <div class="project-card-header">
+                <div class="project-title-left">
+                  <span class="repo-type-icon">${repoIcon}</span>
+                  <h3 class="project-title">
+                    <a href="${repoUrl}" target="_blank" rel="noopener noreferrer" class="project-github-title-link">
+                      ${repo.name}
+                    </a>
+                  </h3>
+                </div>
+                <span class="project-expand-arrow">↗</span>
+              </div>
+              
+              <div class="project-expand-body">
+                ${imgUrl ? `
+                  <div class="project-img-wrapper">
+                    <img src="${imgUrl}" alt="${repo.name} preview image">
+                    <span class="project-category-badge">${categoryBadge}</span>
+                  </div>
+                ` : `
+                  <div class="project-code-banner">
+                    <div class="code-banner-header">
+                      <span class="code-dot red"></span>
+                      <span class="code-dot yellow"></span>
+                      <span class="code-dot green"></span>
+                      <span class="code-banner-lang">${repo.language || 'GitHub'}</span>
+                    </div>
+                    <div class="code-banner-body">
+                      <span class="code-icon">⚡</span>
+                      <h4 class="code-repo-name">${repo.name}</h4>
+                    </div>
+                  </div>
+                `}
+
+                <div class="project-body-content">
+                  <p class="project-description">
+                    ${desc}
+                  </p>
+
+                  <div class="project-tech-tags">
+                    ${tags.map(tag => `<span class="tech-tag">${tag}</span>`).join('')}
+                    ${starCount ? `<span class="tech-tag star-tag">${starCount}</span>` : ''}
+                  </div>
+
+                  <div class="project-links">
+                    <a href="${repoUrl}" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                      <span>View Repository on GitHub</span>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          `;
+        }).join('');
+
+      } catch (err) {
+        console.warn('Dynamic GitHub repos load fallback:', err);
+      }
+    }
+
+    // Trigger GitHub dynamic data loading on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      loadGitHubContributions();
+      loadGitHubProjects();
+    });
+    loadGitHubContributions();
+    loadGitHubProjects();
+  </script>
+</body>
+</html>

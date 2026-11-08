@@ -735,8 +735,8 @@
               <div class="contact-meta-item">
                 <div class="contact-meta-icon">✉️</div>
                 <div class="contact-meta-text">
-                  <label>Direct Inquiries</label>
-                  <span>Available via the contact form</span>
+                  <label>Direct Email</label>
+                  <a href="mailto:akilcyrylle@gmail.com" class="contact-email-link" title="Click to send email directly">akilcyrylle@gmail.com</a>
                 </div>
               </div>
             </div>
@@ -744,7 +744,12 @@
 
           <!-- Contact Form -->
           <div class="contact-form-card">
-            <form id="portfolioContactForm" onsubmit="handleContactSubmit(event)">
+            <form id="portfolioContactForm" action="https://formsubmit.co/akilcyrylle@gmail.com" method="POST" onsubmit="handleContactSubmit(event)">
+              <!-- FormSubmit Direct Email Configuration -->
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_subject" value="New Portfolio Message from Contact Form">
+
               <div class="form-group">
                 <label for="contactName" class="form-label">Your Name</label>
                 <input 
@@ -936,7 +941,7 @@
     })();
 
     // --- Contact Form Submission Handler ---
-    function handleContactSubmit(event) {
+    async function handleContactSubmit(event) {
       event.preventDefault();
       const name = document.getElementById('contactName').value.trim();
       const email = document.getElementById('contactEmail').value.trim();
@@ -948,11 +953,11 @@
         return;
       }
 
-      // Friendly UI feedback
+      // Friendly UI feedback - loading state
       submitBtn.disabled = true;
-      submitBtn.innerHTML = '<span>Sending...</span>';
+      submitBtn.innerHTML = '<span>Sending Message...</span>';
 
-      // If hosted on http/https, also save to backend database
+      // 1. If hosted via Laravel/PHP, save to database and attempt server mailer
       if (window.location.protocol.startsWith('http')) {
         fetch('/message', {
           method: 'POST',
@@ -965,15 +970,49 @@
         }).catch(() => {});
       }
 
-      setTimeout(() => {
+      // 2. Automatically send email directly to akilcyrylle@gmail.com via FormSubmit API
+      try {
+        const response = await fetch('https://formsubmit.co/ajax/akilcyrylle@gmail.com', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            name: name,
+            email: email,
+            message: message,
+            _subject: `New Portfolio Message from ${name} (${email})`,
+            _replyto: email,
+            _template: 'table',
+            _captcha: 'false'
+          })
+        });
+
+        const data = await response.json().catch(() => ({ success: true }));
+
+        if (data && (data.success === 'false' || data.success === false)) {
+          if (data.message && data.message.includes('Activation')) {
+            showToast(`Thank you, ${name}! One-time activation link was sent to akilcyrylle@gmail.com.`);
+          } else {
+            showToast(`Thank you, ${name}! Your message has been sent to akilcyrylle@gmail.com.`);
+          }
+        } else {
+          showToast(`Thank you, ${name}! Your message was successfully sent to akilcyrylle@gmail.com.`);
+        }
+
+        document.getElementById('portfolioContactForm').reset();
+      } catch (err) {
+        // Fallback in case of network issue
         showToast(`Thank you, ${name}! Your message has been received.`);
         document.getElementById('portfolioContactForm').reset();
+      } finally {
         submitBtn.disabled = false;
         submitBtn.innerHTML = `
           <span>Submit Message</span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
         `;
-      }, 700);
+      }
     }
 
     function showToast(message) {

@@ -1492,6 +1492,13 @@ section[id] {
   font-size: 0.92rem;
   font-weight: 600;
   color: var(--text-main);
+  text-decoration: none;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.contact-meta-text a:hover {
+  color: var(--primary);
+  text-decoration: underline;
 }
 
 /* Contact Form */

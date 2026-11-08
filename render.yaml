@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: akil-portfolio
+    env: static
+    buildCommand: ""
+    staticPublishPath: ./public

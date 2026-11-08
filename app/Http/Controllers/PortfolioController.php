@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Message;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Log;
 
 class PortfolioController extends Controller
 {
@@ -16,7 +18,7 @@ class PortfolioController extends Controller
     }
 
     /**
-     * Store a new message in the database.
+     * Store a new message in the database and email it.
      */
     public function store(Request $request)
     {
@@ -33,6 +35,19 @@ class PortfolioController extends Controller
             Message::create([
                 'content' => $fullContent,
             ]);
+
+            // Attempt to send email to akilcyrylle@gmail.com
+            try {
+                Mail::raw("New message received from your portfolio contact form:\n\nName: " . ($name ?? 'Anonymous') . "\nEmail: " . ($email ?? 'No email provided') . "\n\nMessage:\n" . $content, function ($mail) use ($name, $email) {
+                    $mail->to('akilcyrylle@gmail.com')
+                         ->subject('New Portfolio Message from ' . ($name ?? 'Visitor'));
+                    if ($email && filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                        $mail->replyTo($email, $name);
+                    }
+                });
+            } catch (\Throwable $e) {
+                Log::warning('Portfolio mail sending failed: ' . $e->getMessage());
+            }
         }
 
         if ($request->wantsJson() || $request->ajax()) {
